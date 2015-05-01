@@ -50,11 +50,11 @@
 
 <hr />
 
-<p vocab="http://www.w3.org/ns/csvw#">
+<p vocab="http://www.w3.org/ns/csvw#" prefix="dc: http://purl.org/dc/terms/">
   
   <dl typeof="Table schema:Dataset">
     <dt>url:</dt>
-    <dd a href="example.csv">example.csv</dd>
+    <dd a property="url schema:url" href="example.csv">example.csv</dd>
   
     <dt>Creator:</dt>
     <dd property="dc:creator schema:creator">Dan Brickley</dd>
@@ -67,6 +67,8 @@
     <span property="tableSchema">
       <span property="aboutUrl" content="http://librarything.com/isbn/{isbn}" />
       <span property="primaryKey" content="isbn" />
+      
+      
       
     </span>
   </dl>

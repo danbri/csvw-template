@@ -14,31 +14,31 @@
     <dt>Last modified:</dt><dd property="dc:modified schema:dateModified">2014-05-09T15:44:58Z</dd>
     <dt>Publisher:</dt><dd property="dc:publisher schema:publisher">My Books</dd>
 
-    <span rel="tableSchema">
+    <span property="tableSchema" typeof="Schema">
       
         <span property="aboutUrl" content="http://librarything.com/isbn/{isbn}"/>
         <span property="primaryKey" content="isbn"/>
 
-      <span rel="columns">
-        <span property="name" content="isbn"/>
-        <span property="titles" content="ISBN-10"/>
-        <span property="datatype" content="string"/>
-        <span property="unique" content="true"/>
-        <span property="propertyUrl" content="http://purl.org/dc/terms/identifier"/>
+      <span property="columns" typeof="Column">
+        <meta property="name" content="isbn"/>
+        <meta property="titles" content="ISBN-10"/>
+        <meta property="datatype" content="string"/>
+        <meta property="unique" content="true"/>
+        <meta property="propertyUrl" content="http://purl.org/dc/terms/identifier"/>
       </span>
 
-      <span rel="columns">
-        <span property="name" content="title"/>
-        <span property="titles" content="Book Title"/>
-        <span property="datatype" content="string"/>
-        <span property="propertyUrl" content="http://purl.org/dc/terms/title"/>
+      <span property="columns"  typeof="Column">
+        <meta property="name" content="title"/>
+        <meta property="titles" content="Book Title"/>
+        <meta property="datatype" content="string"/>
+        <meta property="propertyUrl" content="http://purl.org/dc/terms/title"/>
       </span>
 
-      <span rel="columns">
-        <span property="name" content="author"/>
-        <span property="titles" content="Book Author"/>
-        <span property="datatype" content="string"/>
-        <span property="propertyUrl" content="http://purl.org/dc/terms/creator"/>
+      <span property="columns" typeof="Column">
+        <meta property="name" content="author"/>
+        <meta property="titles" content="Book Author"/>
+        <meta property="datatype" content="string"/>
+        <meta property="propertyUrl" content="http://purl.org/dc/terms/creator"/>
       </span>
       
     </span>

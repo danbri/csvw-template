@@ -2,44 +2,46 @@
   <head><title>CSV Example</title></head>
 
 <body>
+<div vocab="http://www.w3.org/ns/csvw#" prefix="dc: http://purl.org/dc/terms/ csvw: http://www.w3.org/ns/csvw#">
+  
     <h1>Example CSV</h1>
-    <h3>Here is how the JSON-LD might look as RDFa (rough test only)</h3>
+    <p>Here is how the JSON-LD might look as RDFa (rough test only)</p>
 
-<p vocab="http://www.w3.org/ns/csvw#" prefix="dc: http://purl.org/dc/terms/">
     <dl typeof="Table schema:Dataset">
-    <dt>url:</dt><dd a property="url schema:url" href="example.csv">example.csv</dd>
+    <dt>url:</dt><dd><a property="url schema:url" href="example.csv">example.csv</a></dd>
     <dt>Creator:</dt><dd property="dc:creator schema:creator">Dan Brickley</dd>
     <dt>Last modified:</dt><dd property="dc:modified schema:dateModified">2014-05-09T15:44:58Z</dd>
     <dt>Publisher:</dt><dd property="dc:publisher schema:publisher">My Books</dd>
 
     <span property="tableSchema">
-      <span property="aboutUrl" content="http://librarything.com/isbn/{isbn}" />
-      <span property="primaryKey" content="isbn" />
-      <span property="columns">
+      <span typeof="Thing">
+        <span property="aboutUrl" content="http://librarything.com/isbn/{isbn}"/>
+        <span property="primaryKey" content="isbn"/>
+      </span>
+      <span property="columns" typeof="Thing">
         <span property="name" content="isbn"/>
         <span property="titles" content="ISBN-10"/>
         <span property="datatype" content="string"/>
         <span property="unique" content="true"/>
         <span property="propertyUrl" content="http://purl.org/dc/terms/identifier"/>
-        </dl>
       </span>
-      <span property="columns">
+
+      <span property="columns" typeof="Thing">
         <span property="name" content="title"/>
         <span property="titles" content="Book Title"/>
         <span property="datatype" content="string"/>
         <span property="propertyUrl" content="http://purl.org/dc/terms/title"/>
-        </dl>
       </span>
-      <span property="columns">
+
+      <span property="columns" typeof="Thing">
         <span property="name" content="author"/>
         <span property="titles" content="Book Author"/>
         <span property="datatype" content="string"/>
         <span property="propertyUrl" content="http://purl.org/dc/terms/creator"/>
-        </dl>
       </span>
     </span>
   </dl>
-</p>
 
-  </body>
+</div>
+</body>
 </html>

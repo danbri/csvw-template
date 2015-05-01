@@ -9,16 +9,17 @@
     <p>Here is how the JSON-LD might look as RDFa (rough test only)</p>
 
     <dl typeof="Table schema:Dataset">
-    <dt>url:</dt><dd><a property="url schema:url" href="example.csv">example.csv</a></dd>
+    <dt>url:</dt><dd><a property="url schema:url" typeof="schema:DataDownload" href="example.csv">example.csv</a></dd>
     <dt>Creator:</dt><dd property="dc:creator schema:creator">Dan Brickley</dd>
     <dt>Last modified:</dt><dd property="dc:modified schema:dateModified">2014-05-09T15:44:58Z</dd>
     <dt>Publisher:</dt><dd property="dc:publisher schema:publisher">My Books</dd>
 
     <span rel="tableSchema">
+      
         <span property="aboutUrl" content="http://librarything.com/isbn/{isbn}"/>
         <span property="primaryKey" content="isbn"/>
 
-      <span rel="columns" typeof="Thing">
+      <span rel="columns">
         <span property="name" content="isbn"/>
         <span property="titles" content="ISBN-10"/>
         <span property="datatype" content="string"/>
@@ -26,19 +27,20 @@
         <span property="propertyUrl" content="http://purl.org/dc/terms/identifier"/>
       </span>
 
-      <span rel="columns" typeof="Thing">
+      <span rel="columns">
         <span property="name" content="title"/>
         <span property="titles" content="Book Title"/>
         <span property="datatype" content="string"/>
         <span property="propertyUrl" content="http://purl.org/dc/terms/title"/>
       </span>
 
-      <span rel="columns" typeof="Thing">
+      <span rel="columns">
         <span property="name" content="author"/>
         <span property="titles" content="Book Author"/>
         <span property="datatype" content="string"/>
         <span property="propertyUrl" content="http://purl.org/dc/terms/creator"/>
       </span>
+      
     </span>
   </dl>
 
